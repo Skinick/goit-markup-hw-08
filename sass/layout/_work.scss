@@ -1,0 +1,32 @@
+.works {
+  padding-top: 0;
+}
+
+.work-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product-wrapper {
+  position: relative;
+}
+
+.work-title {
+  @include font(14px, 700, 16px);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 27px;
+}
+
+.work-title-wrapper {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  transform: translateY(-70px);
+}

@@ -1,0 +1,235 @@
+.page-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--secondary-font);
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
+.logo-part-header {
+  color: var(--black-color);
+}
+
+.mail {
+  @extend %aling;
+  @include font(14px, 500, 16px);
+  color: var(--secondary-text-color);
+  transition: color var(--transition);
+
+  &:hover {
+    cursor: pointer;
+    color: var(--accent-color);
+  }
+
+  &:focus {
+    cursor: pointer;
+    color: var(--accent-color);
+  }
+}
+
+.phone {
+  cursor: pointer;
+  color: var(--accent-color);
+
+  &:hover {
+    color: var(--accent-color);
+  }
+
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.phone-number {
+  @extend %aling;
+  @include font(14px, 700, 16px);
+  color: var(--secondary-text-color);
+  transition: color var(--transition);
+
+  &:hover {
+    cursor: pointer;
+    color: var(--accent-color);
+  }
+
+  &:focus {
+    cursor: pointer;
+    color: var(--accent-color);
+  }
+}
+
+.mail-icon {
+  margin-right: 10px;
+  order: -1;
+  align-self: center;
+  fill: currentColor;
+}
+
+.phone-icon {
+  margin-right: 10px;
+  order: -1;
+  align-self: center;
+  fill: currentColor;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+  .contacts {
+    display: none;
+  }
+
+  .mobile-menu-open {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  .logo {
+    margin-right: 88px;
+  }
+
+  .mobile-menu-open {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .page-nav {
+    display: flex;
+    text-align: center;
+  }
+
+  .menu__link {
+    position: relative;
+    display: block;
+    @include font(14px, 500, 16px);
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    transition: color var(--transition);
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .mail {
+    margin-bottom: 10px;
+  }
+
+  .mail,
+  .phone-number {
+    justify-content: start;
+    font-size: 12px;
+  }
+
+  .mail-icon,
+  .phone-icon {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-nav {
+    align-items: center;
+  }
+
+  .menu {
+    gap: 53px;
+  }
+
+  .current {
+    color: var(--accent-color);
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      bottom: -33px;
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      background-color: var(--accent-color);
+      transition: background-color var(--accent-color);
+    }
+  }
+
+  .current:hover:after {
+    background-color: var(--accent-color);
+  }
+
+  .contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .email {
+    margin-right: 50px;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .mail {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  .phone-number {
+    @extend %aling;
+    @include font(14px, 700, 16px);
+    color: var(--secondary-text-color);
+    transition: color var(--transition);
+
+    &:hover {
+      cursor: pointer;
+      color: var(--accent-color);
+    }
+
+    &:focus {
+      cursor: pointer;
+      color: var(--accent-color);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.futures-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.futures-section-item {
+  width: 270px;
+}
+
+.futures-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.future-title {
+  @include font(14px, 700, 16px);
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  width: 270px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.future-text {
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}

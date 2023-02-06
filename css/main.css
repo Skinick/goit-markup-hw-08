@@ -506,31 +506,6 @@ button {
   }
 }
 */
-.modal-btn {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.875;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: var(--white-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  min-width: 200px;
-  border: none;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px 32px;
-  transition: color var(--transition);
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  color: #188ce8;
-}
-
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -1233,6 +1208,110 @@ button {
 }
 */
 .hero {
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background: rgba(47, 48, 58, 0.4);
+  text-align: center;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-mobile.jpg");
+    max-width: 480px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-mobile@2x.jpg");
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-tablet.jpg");
+    max-width: 768px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero-tablet@2x.jpg");
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    max-width: 1600px;
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/hero@2x.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    max-width: 1600px;
+  }
+}
+.hero-title {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.6153846154;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero-title {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    width: 696px;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.3636363636;
+  }
+}
+
+.modal-btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 200px;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+  transition: color var(--transition);
+}
+.modal-btn:hover, .modal-btn:focus {
+  color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*
+.hero {
   justify-content: center;
   align-items: center;
   max-width: 1600px;
@@ -1241,14 +1320,14 @@ button {
   padding: 0;
   text-align: center;
   background: rgba(47, 48, 58, 0.4);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
   background-size: cover;
 }
 
 .hero-title {
-  font-size: 44px;
-  font-weight: 900;
-  line-height: 1.3636363636;
+  @extend %aling;
+  @include font(44px, 900, 60px);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
@@ -1258,7 +1337,7 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
-
+*/
 .customers-list {
   display: flex;
   justify-content: center;

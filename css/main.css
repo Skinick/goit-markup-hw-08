@@ -1446,22 +1446,66 @@ button {
   background: var(--background-color);
 }
 
+@media screen and (min-width: 768px) {
+  .team-peoples {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.team-member {
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team-member {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-member {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+@media screen and (max-width: 767px) {
+  .team-member {
+    flex-basis: 450px;
+  }
+  .team-member:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-member:not(:nth-last-child(-n+2)) {
+    margin-bottom: 30px;
+  }
+  .team-member:not(:nth-last-child(2n-1)) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-member:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.team-people-info {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team-people-info {
+    padding-bottom: 30px;
+  }
+}
+
 .team-peoples {
   display: flex;
   text-align: center;
-}
-
-.team-member {
-  display: block;
-  flex-wrap: wrap;
-  list-style: none;
-  width: 270px;
-  height: 428px;
-  margin-bottom: 30px;
-  margin-right: 30px;
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  /*
+    @media screen and (max-width: 767px) {
+      display: flex;
+    }*/
 }
 
 .team-name {
@@ -1470,7 +1514,6 @@ button {
   line-height: 1.1875;
   color: var(--primary-text-color);
   text-align: center;
-  padding-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -1483,6 +1526,21 @@ button {
   margin-bottom: 16px;
 }
 
+/*
+.team-member {
+  display: block;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 270px;
+  height: 428px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+*/
 .works {
   padding-top: 0;
 }

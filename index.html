@@ -209,13 +209,29 @@
       </section>
     -->
       <!-- Команда -->
-      <!--
+    
       <section class="team section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-peoples">
             <li class="team-member">
-              <img src="./images/img.jpg" alt="Игорь Демьяненко" width="270" />
+              <picture>
+                <source
+                  srcset="./images/employee1.jpg 1x, ./images/employee1@2x.jpg 2x"
+                  media="(min-width: 1200px)"/>
+
+                <source
+                  srcset="./images/employee1-tablet.jpg 1x, ./images/employee1-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="./images/employee1-mobile.jpg 1x, ./images/employee1-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/employee1-mobile.jpg" alt="Игорь Демьяненко" />
+              </picture>
+              
               <div class="team-people-info">
                 <h3 class="team-name">Игорь Демьяненко</h3>
                 <p class="team-position">Product Designer</p>
@@ -252,7 +268,25 @@
               </div>
             </li>
             <li class="team-member">
-              <img src="./images/img1.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source
+                  srcset="./images/employee2.jpg 1x, ./images/employee2@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/employee2-tablet.jpg 1x, ./images/employee2-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="./images/employee2-mobile.jpg 1x, ./images/employee2-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/employee2-mobile.jpg" alt="Ольга Репина" />
+              </picture>
+
               <div class="team-people-info">
                 <h3 class="team-name">Ольга Репина</h3>
                 <p class="team-position">Frontend Developer</p>
@@ -289,7 +323,25 @@
               </div>
             </li>
             <li class="team-member">
-              <img src="./images/img2.jpg" alt="Николай Тарасов" width="270" />
+              <picture>
+                <source
+                  srcset="./images/employee3.jpg 1x, ./images/employee3@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/employee3-tablet.jpg 1x, ./images/employee3-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="./images/employee3-mobile.jpg 1x, ./images/employee3-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/employee3-mobile.jpg" alt="Николай Тарасов" />
+              </picture>
+              <div class="team-people-info">
               <h3 class="team-name">Николай Тарасов</h3>
               <p class="team-position">Marketing</p>
               <ul class="social-list">
@@ -322,9 +374,28 @@
                   </a>
                 </li>
               </ul>
+              </div>
             </li>
             <li class="team-member">
-              <img src="./images/img3.jpg" alt="Михаил Ермаков" width="270" />
+              <picture>
+                <source
+                  srcset="./images/employee4.jpg 1x, ./images/employee4@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/employee4-tablet.jpg 1x, ./images/employee4-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <source
+                  srcset="./images/employee4-mobile.jpg 1x, ./images/employee4-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/employee4-mobile.jpg" alt="Михаил Ермаков" />
+              </picture>
+              <div class="team-people-info">
               <h3 class="team-name">Михаил Ермаков</h3>
               <p class="team-position">UI Designer</p>
               <ul class="social-list">
@@ -357,11 +428,12 @@
                   </a>
                 </li>
               </ul>
+              </div>
             </li>
           </ul>
         </div>
       </section>
-    -->
+  
       <!-- Regular Customers -->
     
       <section class="regular-customers section">

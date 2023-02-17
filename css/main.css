@@ -102,13 +102,12 @@ button {
 .container {
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -814,8 +813,7 @@ button {
 }
 
 .page-header {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  background-color: var(--white-color);
   border-bottom: 1px solid #ececec;
 }
 
@@ -897,21 +895,15 @@ button {
   .menu {
     display: none;
   }
-  .contacts {
-    display: none;
-  }
   .mobile-menu-open {
     background-color: transparent;
     border: none;
-    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     line-height: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .page-header {
-    padding-top: 24px;
-    padding-bottom: 25px;
-  }
   .logo {
     margin-right: 88px;
   }
@@ -961,14 +953,6 @@ button {
   .phone-icon {
     margin-right: 8px;
   }
-}
-@media screen and (min-width: 1200px) {
-  .page-nav {
-    align-items: center;
-  }
-  .menu {
-    gap: 53px;
-  }
   .current {
     color: var(--accent-color);
   }
@@ -986,10 +970,13 @@ button {
   .current:hover:after {
     background-color: var(--accent-color);
   }
-  .contacts {
-    display: flex;
+}
+@media screen and (min-width: 1200px) {
+  .page-nav {
     align-items: center;
-    margin-left: auto;
+  }
+  .menu {
+    gap: 53px;
   }
   .email {
     margin-right: 50px;
@@ -1020,6 +1007,27 @@ button {
     color: var(--accent-color);
   }
 }
+@media screen and (max-width: 767px) {
+  .contacts {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    margin-left: auto;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    margin-left: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 .filter-btn {
   border: none;
   font-family: inherit;
@@ -1566,29 +1574,48 @@ button {
 }
 
 .all-projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .all-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+  }
 }
 
+@media screen and (max-width: 767px) {
+  .project-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 .project-card-link {
+  display: block;
+  box-shadow: none;
   transition: box-shadow var(--transition);
 }
-.project-card-link:hover {
-  display: block;
+.project-card-link:hover, .project-card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.project-card-link:focus {
-  display: block;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.project-card-link:hover .overlay, .project-card-link:focus .overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-card-link {
+    width: 354px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .project-card-title {
-  padding-top: 20px;
-  border: 1px solid #eeeeee;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
 }
 
 .project-title {
@@ -1607,18 +1634,14 @@ button {
   color: var(--secondary-text-color);
 }
 
-.project__card-img-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.project__card__overlay {
+.overlay {
   left: 0;
   top: 0;
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: auto;
+  opacity: 0;
   transform: translateY(100%);
   transition: transform var(--transition);
   font-size: 18px;
@@ -1627,7 +1650,4 @@ button {
   color: var(--white-color);
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
-}
-.project__card__link:hover .project__card__overlay, .project__card__link:focus .project__card__overlay {
-  transform: translate(0, 0);
 }/*# sourceMappingURL=main.css.map */

@@ -1028,6 +1028,32 @@ button {
   }
 }
 
+.filter-button {
+  display: flex;
+  max-width: 350px;
+  gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .filter-button {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter-button {
+    min-width: 100%;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-button {
+    min-width: 100%;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+}
+
 .filter-btn {
   border: none;
   font-family: inherit;
@@ -1060,13 +1086,6 @@ button {
 .active {
   background: var(--accent-color);
   color: var(--white-color);
-}
-
-.filter-button {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 50px;
 }
 
 .social-list {
@@ -1388,52 +1407,19 @@ button {
   fill: var(--icons-color);
   transition: fill var(--transition);
 }
-.customers-list-icon:hover, .customers-list-icon:focus {
+
+.customers-list-link:is(:hover, :focus) .customers-list-icon {
   fill: var(--accent-color);
-}
-
-/*
-.customers-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.customers-list-link {
-  @extend %aling;
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--icons-color);
-  border-radius: 4px;
-  transition: border var(--transition);
-
-  &:hover {
-    border: 1px solid var(--accent-color);
-  }
-
-  &:focus {
-    border: 1px solid var(--accent-color);
-  }
 }
 
 .customers-list-icon {
   fill: var(--icons-color);
   transition: fill var(--transition);
-
-  &:hover {
-    fill: var(--accent-color);
-  }
-
-  &:focus {
-    fill: var(--accent-color);
-  }
-
-  .customers-list-link:hover &,
-  .customers-list-link:focus & {
-    fill: var(--accent-color);
-  }
 }
-*/
+.customers-list-icon:hover, .customers-list-icon:focus {
+  fill: var(--accent-color);
+}
+
 .team {
   background: var(--background-color);
 }
@@ -1592,15 +1578,14 @@ button {
 }
 .project-card-link {
   display: block;
-  box-shadow: none;
   transition: box-shadow var(--transition);
+  box-shadow: none;
 }
 .project-card-link:hover, .project-card-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-card-link:hover .overlay, .project-card-link:focus .overlay {
   transform: translateY(0);
-  opacity: 1;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .project-card-link {
@@ -1616,6 +1601,7 @@ button {
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .project-title {
@@ -1634,20 +1620,24 @@ button {
   color: var(--secondary-text-color);
 }
 
+.project-card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .overlay {
+  position: absolute;
   left: 0;
   top: 0;
-  position: absolute;
   width: 100%;
   height: 100%;
+  padding: 63px 24px;
   overflow: auto;
-  opacity: 0;
-  transform: translateY(100%);
+  transform: translate(0, 101%);
   transition: transform var(--transition);
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5555555556;
   color: var(--white-color);
-  padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
 }/*# sourceMappingURL=main.css.map */

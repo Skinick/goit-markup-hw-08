@@ -51,52 +51,18 @@
 .customers-list-icon {
   fill: var(--icons-color);
   transition: fill var(--transition);
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
 }
 
-/*
-.customers-list {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.customers-list-link {
-  @extend %aling;
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--icons-color);
-  border-radius: 4px;
-  transition: border var(--transition);
-
-  &:hover {
-    border: 1px solid var(--accent-color);
-  }
-
-  &:focus {
-    border: 1px solid var(--accent-color);
-  }
+.customers-list-link:is(:hover, :focus) .customers-list-icon {
+  fill: var(--accent-color);
 }
 
 .customers-list-icon {
   fill: var(--icons-color);
   transition: fill var(--transition);
 
-  &:hover {
-    fill: var(--accent-color);
-  }
-
+  &:hover,
   &:focus {
     fill: var(--accent-color);
   }
-
-  .customers-list-link:hover &,
-  .customers-list-link:focus & {
-    fill: var(--accent-color);
-  }
 }
-*/

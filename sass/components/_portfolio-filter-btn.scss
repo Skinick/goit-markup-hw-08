@@ -1,3 +1,25 @@
+.filter-button {
+  display: flex;
+  max-width: 350px;
+  gap: 8px;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    min-width: 100%;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 100%;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+}
+
 .filter-btn {
   border: none;
   font-family: inherit;
@@ -35,11 +57,4 @@
 .active {
   background: var(--accent-color);
   color: var(--white-color);
-}
-
-.filter-button {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 50px;
 }

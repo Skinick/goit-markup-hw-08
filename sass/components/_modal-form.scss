@@ -19,8 +19,8 @@
 
 .modal-form-input-desc {
   display: block;
-  @include font(12px, 400, 14px);
   margin-bottom: 4px;
+  @include font(12px, 400, 14px);
   color: var(--secondary-text-color);
 }
 
@@ -82,7 +82,7 @@
 
 .modal-form-chek-desc::before {
   display: block;
-  content: '';
+  content: "";
   width: 16px;
   height: 15px;
   cursor: pointer;
@@ -101,9 +101,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @include font(14px, 400, 24px);
+  @include font(12px, 400, 14px);
   color: var(--secondary-text-color);
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    @include font(14px, 400, 24px);
+  }
 }
 
 .modal-form-chek-desc a {
@@ -146,6 +150,7 @@
   color: var(--primary-text-color);
   margin-bottom: 12px;
 }
+
 /*
 .modal-form-mail {
   display: block;

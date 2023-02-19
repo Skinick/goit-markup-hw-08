@@ -131,7 +131,8 @@
   margin-right: auto;
   padding: 10px 32px;
   transition: color var(--transition);
-
+  transform: var(--transition);
+  
   &:hover,
   &:focus {
     color: #188ce8;

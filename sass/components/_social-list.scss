@@ -1,35 +1,34 @@
 .social-list {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-
 .social-list-link {
-    @extend %aling;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--white-color);
-    color: var(--icons-color);
-    opacity: 0.87;
-    transition: background-color var(--transition);
+  @extend %aling;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  color: var(--icons-color);
+  opacity: 0.87;
+  transition: background-color var(--transition);
 
-    &:hover {
-        background-color: var(--accent-color);
-    }
+  &:hover {
+    background-color: var(--accent-color);
+  }
 
-    &:focus {
-        background-color: var(--accent-color);
-    }
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .social-list-icon {
-    fill: var(--icons-color);
-    transition: fill var(--transition);
+  fill: var(--icons-color);
+  transition: fill var(--transition);
 
-    .social-list-link:hover &,
-    .social-list-link:focus & {
-        fill: var(--white-color);
-    }
+  .social-list-link:hover &,
+  .social-list-link:focus & {
+    fill: var(--white-color);
+  }
 }

@@ -91,14 +91,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-img {
-  display: block;
-}
-
-button {
-  cursor: pointer;
-}
-
 .container {
   padding-left: 15px;
   padding-right: 15px;
@@ -493,6 +485,10 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .modal {
@@ -1199,40 +1195,6 @@ button {
   margin-bottom: 10px;
 }
 
-/*
-.futures-list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.futures-section-item {
-  width: 270px;
-}
-
-.futures-element {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 120px;
-  background: #f5f4fa;
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-
-.future-title {
-  @include font(14px, 700, 16px);
-  text-transform: uppercase;
-  color: var(--primary-text-color);
-  width: 270px;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-.future-text {
-  line-height: 1.71;
-  color: var(--secondary-text-color);
-}
-*/
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
@@ -1330,7 +1292,8 @@ button {
   margin-right: auto;
   padding: 10px 32px;
   transition: color var(--transition);
-  transform: var(--transition);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover, .modal-btn:focus {
   color: #188ce8;
@@ -1493,16 +1456,6 @@ button {
   }
 }
 
-/*
-.team-peoples {
-  display: flex;
-  text-align: center;
-
-  @media screen and (max-width: 767px) {
-    display: flex;
-  }
-}
-*/
 .team-name {
   font-size: 16px;
   font-weight: 500;

@@ -56,16 +56,7 @@
     padding-bottom: 30px;
   }
 }
-/*
-.team-peoples {
-  display: flex;
-  text-align: center;
 
-  @media screen and (max-width: 767px) {
-    display: flex;
-  }
-}
-*/
 .team-name {
   @include font(16px, 500, 19px);
   color: var(--primary-text-color);
